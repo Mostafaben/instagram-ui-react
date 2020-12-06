@@ -1,5 +1,6 @@
 .card-container {
   display: flex;
+  position: static;
   margin: 10px;
   background-color: white;
   border: 10px;
@@ -7,6 +8,7 @@
   border-radius: 10px;
   flex-direction: column;
   min-width: fit-content;
+  transition-duration: 200ms;
   padding: 10px;
 }
 
@@ -47,4 +49,20 @@
   height: 20px;
   margin-left: 5px;
   color: rgb(72, 68, 80);
+}
+
+.like {
+  color: red;
+  animation-name: liked-clicked;
+  animation-duration: 500ms;
+}
+@keyframes liked-clicked {
+  0% {
+    transform: scale(0) rotateY(180deg);
+  }
+  50% {
+    transform: scale(1) rotateY(90deg);
+  }
+  100% {
+  }
 }

@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <div className="row">
         {posts.map((e, index) => (
-          <div className="col col-12 col-md-6 col-lg-4 col-xl-3" key={index}>
+          <div className="col col-12 col-sm-6 col-lg-4 col-xl-3" key={index}>
             <Post key={index} />
           </div>
         ))}
