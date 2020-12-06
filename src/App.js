@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import Post from './components/post/post';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
+  const posts = new Array(8).fill(10);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="row">
+        {posts.map((e, index) => (
+          <div className="col col-12 col-md-6 col-lg-4 col-xl-3" key={index}>
+            <Post key={index} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
