@@ -26,18 +26,14 @@ function Post(props) {
     'https://avatars0.githubusercontent.com/u/32815384?s=460&u=56c99b2b8b06a0f4028064facca76dea46997a75&v=4';
 
   return (
-    <div
-      className="card-container"
-      onClick={(e) => {
-        post.current.focus();
-        handleClickAnimation(post.current);
-        props.onClick('name');
-      }}
-      ref={post}
-    >
+    <div className="card-container" ref={post}>
       <LoadingImg isLoading={imgLoading}></LoadingImg>
-
       <img
+        onClick={() => {
+          post.current.focus();
+          handleClickAnimation(post.current);
+          props.onClick(imageUrl);
+        }}
         ref={img}
         style={imgLoading ? { display: 'none' } : { display: 'flex' }}
         className="img"

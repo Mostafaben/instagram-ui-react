@@ -1,9 +1,11 @@
 .loading-container {
   display: flex;
-  height: 140px;
+  min-height: 140px;
+  height: 100%;
   width: 100%;
   position: relative;
   justify-content: center;
+  margin: auto !important;
   align-items: center;
 }
 
@@ -18,7 +20,6 @@
 }
 
 .small {
-  background-color: ;
   opacity: 0.2 !important;
   width: 24px;
   height: 24px;

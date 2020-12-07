@@ -16,3 +16,11 @@ body {
   padding: 0px !important;
   margin: 0px !important;
 }
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  width: 4px;
+  border-radius: 2px;
+  background-color: cadetblue;
+}
