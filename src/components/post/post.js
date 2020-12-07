@@ -1,5 +1,5 @@
 import './post.css';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { handleClickAnimation } from './../../assets/js/animations/post_animations';
 import { BiShare } from 'react-icons/bi';
@@ -8,6 +8,12 @@ import LoadingImg from '../loading/loading';
 
 function Post(props) {
   // to refrence the card
+
+  // change image if props changes
+  useEffect(() => {
+    setimageUrl(`https://picsum.photos/id/${props.idImage}/400`);
+  }, [props]);
+
   const post = useRef(null);
   const img = useRef(null);
   const [hearClicked, setheartClicked] = useState(false);
@@ -25,6 +31,7 @@ function Post(props) {
       onClick={(e) => {
         post.current.focus();
         handleClickAnimation(post.current);
+        props.onClick('name');
       }}
       ref={post}
     >

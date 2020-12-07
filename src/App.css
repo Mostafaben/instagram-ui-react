@@ -4,15 +4,25 @@
 
 .App {
   padding: 5px;
+  min-height: 100vh;
+  position: relative;
 }
 .stories {
-  margin: 10px;
   overflow-x: scroll;
   flex-wrap: nowrap;
   display: flex;
   flex-direction: row;
   position: relative;
   margin-bottom: 0px;
+}
+
+.stories-container {
+  margin: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .stories::-webkit-scrollbar {
@@ -22,4 +32,61 @@
 .stories .icon {
   position: fixed;
   right: 0px;
+}
+.stories-list {
+  width: fit-content;
+}
+
+.stories-container .icon {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index: 2;
+  /* top: 54px; */
+  color: #88888871;
+}
+.stories-container .right {
+  right: -10px;
+}
+.stories-container .left {
+  left: -10px;
+}
+
+.stories-container .icon:hover {
+  color: white;
+}
+
+.header-container {
+  margin: 10px;
+}
+
+/**********************/
+
+.bottom-sheet-container {
+  z-index: 3;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.178);
+}
+.bottom-sheet {
+  position: absolute;
+  bottom: 0px;
+  width: 95%;
+  background-color: white;
+  border-radius: 20px 20px 0px 0px;
+  padding: 20px;
+  background-color: white;
+  margin: 0px 2.5%;
+  animation-name: open-bottom-sheet;
+  animation-duration: 200ms;
+}
+
+@keyframes open-bottom-sheet {
+  0% {
+    transform: translateY(100px);
+    height: 0px;
+  }
 }

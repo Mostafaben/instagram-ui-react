@@ -6,13 +6,13 @@
 .text {
   margin-bottom: 0px;
   font-size: 14px;
+  text-align: center;
   color: rgb(37, 8, 51);
-  display: block;
-  max-width: 70px;
-  text-overflow: ellipsis;
   overflow: hidden;
-  -webkit-line-clamp: 1;
-  word-wrap: break-word;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
 }
 
 .story {
