@@ -1,0 +1,41 @@
+.loading-container {
+  display: flex;
+  height: 140px;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  animation: isLoading 1s ease-in-out infinite;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  position: absolute;
+
+  background-color: rgb(65, 93, 255);
+}
+
+.small {
+  background-color: ;
+  opacity: 0.2 !important;
+  width: 24px;
+  height: 24px;
+  background-color: rgba(65, 94, 255, 0.493);
+}
+
+@keyframes isLoading {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

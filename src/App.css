@@ -1,0 +1,25 @@
+.App * {
+  transition-duration: 200ms;
+}
+
+.App {
+  padding: 5px;
+}
+.stories {
+  margin: 10px;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 0px;
+}
+
+.stories::-webkit-scrollbar {
+  display: none;
+}
+
+.stories .icon {
+  position: fixed;
+  right: 0px;
+}

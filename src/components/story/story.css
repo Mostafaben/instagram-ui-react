@@ -1,0 +1,61 @@
+.story-container {
+  width: 70px;
+  margin-right: 10px;
+}
+
+.text {
+  margin-bottom: 0px;
+  font-size: 14px;
+  color: rgb(37, 8, 51);
+  display: block;
+  max-width: 70px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  word-wrap: break-word;
+}
+
+.story {
+  min-width: 70px;
+  min-height: 70px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  border-radius: 35px;
+}
+.story img {
+  width: 66px;
+  height: 66px;
+  border-radius: 33px;
+  border: 2px solid #e7edf6;
+}
+.story .loader {
+  z-index: -2;
+  width: 70px;
+  position: absolute;
+  height: 70px;
+  border-radius: 35px;
+  top: 0px;
+  left: 0px;
+  background: rgb(63, 94, 251);
+  background: linear-gradient(
+    90deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  animation: spin 3s ease-in-out infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

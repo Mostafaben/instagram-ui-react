@@ -7,6 +7,4 @@ function handleClickAnimation(element) {
   }, 200);
 }
 
-function postActionAnimation() {}
-
 export { handleClickAnimation };
